@@ -6,3 +6,155 @@
     box-sizing: border-box;
 }
 
+/*estilos del header*/
+
+header{
+    margin: 0% 5%;
+    
+}
+
+/*estilos titulo secundario*/
+
+.section-secundario{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem ;
+    text-decoration: underline;
+}
+
+/*propiedades main*/
+
+main{
+    height: 60vh;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "escritura"    
+    "boton";
+    justify-content: center;
+    align-items: center;
+    gap: 2%;    
+    margin: 2%;
+    
+}
+
+/*estilos del titulo principal del main*/
+
+.contenedor-titulo{
+    text-align: center;
+    grid-area: titulo;
+}
+
+/*estilos del parrafo principal*/
+
+.contenedor-parrafo-escrito{
+    font-size: 0.8em;
+    text-align: justify;
+    white-space: pre-line; /*saltos de linea en el texto*/
+    grid-area: escritura;
+}
+
+/*estilos de la foto principal*/
+
+.contenedor-foto{
+    display: none;
+    grid-area: foto;
+}
+
+/*contenedor del boton pricipal*/
+
+.contenedor-boton{    
+    margin-top: 30px;
+    text-align: center;
+    grid-area: boton;
+}
+
+/*estilos generales del boton principal*/
+
+main div button{
+    
+    width: 150px;
+    height: 50px;
+}
+
+/*estilos del boton al posicionarse sobre el mismo*/
+
+main div button:hover{
+    border-radius: 30%;
+    background-color: aqua;
+}
+
+
+/*estilos footer*/
+
+footer{
+    margin-top: 0.5rem;
+    text-align: center;
+    color: gray;
+}
+
+/*estilos al cambio de tamaño a tablet*/
+
+@media screen and (min-width: 800px) {
+
+    .section-secundario{
+        display: none;
+    }
+
+    /*propiedades main*/
+
+    main{
+        max-width: 100%;
+        height: auto;
+        display: grid;
+       
+        grid-template-areas: 
+        "titulo    titulo"
+        "escritura foto"            
+        "boton     boton";
+        justify-content: center;
+        align-items: center;    
+        margin: 2%;
+    }
+
+    main div h3{
+        font-size: 3em;
+    }
+
+    .contenedor-parrafo-escrito{
+        font-size: 1em;       
+    }
+
+    .contenedor-foto{
+        display: block;
+        grid-area: foto;
+    }    
+    
+    main div img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*estilos del footer*/
+
+    footer{
+        margin-top: 5rem;
+        text-align: center;
+        color: gray;
+    }
+}
+
+/*estilos al cambio de tamaño a pc*/
+
+@media screen and (min-width: 1024px) {
+
+    main div h3{
+        font-size: 4em;
+    }
+
+    .contenedor-parrafo-escrito{
+        font-size: 1.2em;       
+    }
+
+}
